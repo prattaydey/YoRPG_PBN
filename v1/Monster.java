@@ -1,4 +1,4 @@
-public class Monster {
+public class Monster extends Character {
   private int health = 100;
   private int nextAttackDmg = 20;
 
