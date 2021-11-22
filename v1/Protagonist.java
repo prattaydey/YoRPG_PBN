@@ -1,4 +1,4 @@
-public class Protagonist{
+public class Protagonist extends Character{
   private String name;
   private int health = 100;
   private int nextAttackDmg;
