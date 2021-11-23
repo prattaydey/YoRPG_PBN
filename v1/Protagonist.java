@@ -1,7 +1,5 @@
 public class Protagonist extends Character{
   private String name;
-  private int health = 100;
-  private int nextAttackDmg;
 
   public Protagonist(String input){
     name = input;
@@ -11,34 +9,16 @@ public class Protagonist extends Character{
     return name;
   }
 
-  public boolean isAlive(){
-    return health > 0;
-  }
-
-  public void changeHealth(int damage){
-    health -= damage;
-  }
-
+  // test your luck. using consecutive special attacks will exponentially
+  // increase your attack rating, but also exponentially decrease your defense.
   public void specialize(){
-  //   if (){
-  //     nextAttackDmg = 30; //placeholder
-  //   }
-  //   else{
-  //
-  //   }
+    halfDefense();
+    boostAtk();
   }
 
   public void normalize(){
-    if (Math.random() > 0.3){
-      nextAttackDmg = 10;
-    }
-    else{
-      nextAttackDmg = 0;
-    }
+    resetDefense();
+    resetAtk();
   }
 
-  public int attack(Monster enemy){
-    enemy.changeHealth(nextAttackDmg);
-    return nextAttackDmg;
-  }
 }
