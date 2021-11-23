@@ -1,0 +1,2 @@
+- When a child class inherits private variables from a mother class, it cannot alter the variable directly.
+- You can overwrite methods that are inherited from a mother class.
