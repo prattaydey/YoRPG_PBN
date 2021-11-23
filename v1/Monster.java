@@ -1,24 +1,19 @@
 public class Monster extends Character {
-  private int health = 100;
-  private int nextAttackDmg = 20;
+  // overwritten attack
+  public int attack(Character name){
+    if (Math.random() > LUCK_THRESHOLD){
+      name.lowerHP((int)((getStrength() * getAtkRating()) - name.getDefense()));
 
-  public int attack(Protagonist hero){
-    double chance = Math.random();
-    if (chance > 0.3){
-      hero.changeHealth(nextAttackDmg);
+      // upon attacking the Protagonist, their defense and strength are reset,
+      // losing any buffs or boosts.
+      name.resetDefense();
+      name.resetAtk();
+
+      return (int)((getStrength() * getAtkRating()) - name.getDefense());
     }
     else{
-      hero.changeHealth(0);
+      // miss!
       return 0;
     }
-    return nextAttackDmg;
-  }
-
-  public void changeHealth(int damage){
-    health -= damage;
-  }
-
-  public boolean isAlive(){
-    return health > 0;
   }
 }
