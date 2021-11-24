@@ -177,12 +177,14 @@ public class YoRPG {
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
 
-        System.out.println( "\n" + pat.getName() + " dealt " + d1 +
-                            " points of damage.");
+  	System.out.println( "\n" + pat.getName() + " dealt " + d1 +
+                            " points of damage." +
+                            "\n" + "Ye Olde Monster's health: " + smaug.getHP());
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-                            " for " + d2 + " points of damage.");
-	    }//end while
+                            " for " + d2 + " points of damage." +
+                            "\n" + pat.getName() + " health: " + pat.getHP());
+	}//end while
 
 	    //option 1: you & the monster perish
 	    if ( !smaug.isAlive() && !pat.isAlive() ) {
