@@ -17,7 +17,7 @@
 #### Healer:
 - Attack Rating: 1
 - Defense: 10
-- Specialize: Chance to heal yourself for 20 HP. You will not attack this turn.
+- Specialize: Heal yourself for 10 HP. You will not attack this turn.
 
 
 ### Monster Subclasses:
