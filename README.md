@@ -26,7 +26,7 @@
 - Attack Rating: 1
 - Defense: 10
 #### Soldier:
-- Attack Rating: 1.2
+- Attack Rating: 1
 - Defense: 20
 #### Vanguard:
 - Attack Rating: 0.75
