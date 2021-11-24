@@ -11,7 +11,7 @@
 
 #### Tank:
 - Attack Rating: 0.8
-- Defense: 12.5
+- Defense: 12
 - Specialize: Has a chance to double defense for a turn. Your attack for that turn is greatly weakened.
 
 #### Healer:
