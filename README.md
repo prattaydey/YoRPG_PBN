@@ -31,3 +31,24 @@
 #### Vanguard:
 - Attack Rating: 0.75
 - Defense: 20
+
+### Changelog:
+
+#### v0 -> v1:
+- actually got specialize() working
+- generalized parameters and arguments
+- created accessor methods, modifier methods
+- added "extends" to Monster and Protagonist class
+
+#### v1 -> v2:
+- fixed method and variable names to make them in line with expectations
+- created additional subclasses of Monster and Character
+- added additional print statements to the Driver, prompted for user input in protagonist kit, added descriptions of classes
+- changed visibility of instance variables to "protected", allowing for the removal of accessor and modifier methods.
+- utilized super() in constructors
+- generally neater
+
+### Future Improvements:
+- Expansion of kits
+- Make it more aesthetically pleasing when running in command line input.
+- Allow for greater (or less) randomness within the game.
