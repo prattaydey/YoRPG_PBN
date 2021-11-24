@@ -1,11 +1,15 @@
 public class Character{
-  public final double LUCK_THRESHOLD = 0.5;
+  protected final double LUCK_THRESHOLD = 0.3;
 
   protected int health;
   protected int strength;
   protected int defense;
   protected double atkRating;
   protected int damage;
+
+  public Character(){
+    health = 100; // everyone starts with 100 health.
+  }
 
   public boolean isAlive(){
     return health > 0;
@@ -20,8 +24,11 @@ public class Character{
   }
 
   public int attack(Character name){
-    if (Math.random() > LUCK_THRESHOLD){
-      damage = (int)((getStrength() * getAtkRating()) - name.getDefense());
+    if (Math.random() > LUCK_THRESHOLD){ // hit!
+      damage = (int)((strength * atkRating) - name.defense);
+      if (damage < 0){
+        damage = 0;
+      }
       name.lowerHP(damage);
     }
     else {
@@ -29,28 +36,5 @@ public class Character{
       damage = 0;
     }
     return damage;
-  }
-
-  // additional methods
-
-  public void halfDefense(){
-    defense /= 2;
-  }
-
-  public void resetDefense(){
-    defense = INIT_DEFENSE;
-  }
-
-  public void boostAtk(){
-    atkRating *= 1.5;
-  }
-
-  public void resetAtk(){
-    atkRating = INIT_ATKRATING;
-  }
-
-  // for testing:
-  public int getHealth(){
-    return health;
   }
 }
