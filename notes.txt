@@ -1,2 +1,11 @@
-- When a child class inherits private variables from a mother class, it cannot alter the variable directly.
-- You can overwrite methods that are inherited from a mother class.
+DISCO:
+ - With inheritance, you can still refer to subclasses with the class type of their superclass.
+ - If you plan on using the class type of a superclass to refer to a subclass's method that IS NOT present in the superclass, you will get an error.
+ 
+QCC:
+ - You can use protected to have a subclass refer to an inherited instance variable. Is there a similar way for a superclass to refer to a subclass's instance variable?
+
+NOTES:
+- When a subclass inherits private variables from a superclass, it cannot alter the variable directly.
+- You can overwrite methods that are inherited from a superclass.
+- Use protected to allow a subclass to access inherited instance variables.
