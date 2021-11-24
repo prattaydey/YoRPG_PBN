@@ -10,7 +10,7 @@
 - Specialize: Chance to stack potential damage until attack lands, but is also more vulnerable to monster attacks.
 
 #### Tank:
-- Attack Rating: 1
+- Attack Rating: 0.8
 - Defense: 50
 - Specialize: Chance to nullify monster's attack next turn (make monster's attack deal 0 damage).
 
