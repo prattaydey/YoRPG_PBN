@@ -24,10 +24,10 @@
 
 #### Peasant:
 - Attack Rating: 1
-- Defense: 15
+- Defense: 10
 #### Soldier:
 - Attack Rating: 1
-- Defense: 10
+- Defense: 15
 #### Vanguard:
 - Attack Rating: 0.75
 - Defense: 20
