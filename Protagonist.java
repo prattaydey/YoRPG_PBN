@@ -2,23 +2,20 @@ public class Protagonist extends Character{
   private String name;
 
   public Protagonist(String input){
+    super();
     name = input;
+    strength = 40;
   }
 
   public String getName(){
     return name;
   }
 
-  // test your luck. using consecutive special attacks will exponentially
-  // increase your attack rating, but also exponentially decrease your defense.
   public void specialize(){
-    halfDefense();
-    boostAtk();
+    // will be overwritten by subclass
   }
 
   public void normalize(){
-    resetDefense();
-    resetAtk();
+    // will be overwritten by subclass
   }
-
 }

@@ -11,10 +11,21 @@
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  *
  * DISCO:
+ * - With inheritance, you can still refer to subclasses with the class type of their superclass.
+ * - If you plan on using the class type of a superclass to refer to a subclass's method that IS NOT present in the superclass, you will get an error.
  *
  * QCC:
- *
+ * - You can use protected to have a subclass refer to an inherited instance variable. Is there a similar way for a superclass to refer to a subclass's instance variable?
  **********************************************/
+
+/***********************************************
+ * OUR DRIVER MODS
+ * We allowed the user to make a choice on which class they want to play as.
+ *  - To do this, we redefined String s and declared int chosenClass to hold the value of the int input corresponding to a certain calss.
+ * We implemented Math.random() to determine what kind of Monster you will encounter.
+ *  - We defined int temp as a helper variable to store the value of a randomly generated int in the range [0,2].
+ * We added print statements of the descriptions of different subclasses of Protagonists and Monsters.
+ ***********************************************/
 
 import java.io.*;
 import java.util.*;
@@ -29,10 +40,12 @@ public class YoRPG {
   //each round, a Protagonist and a Monster will be instantiated...
   private Protagonist pat;
   private Monster smaug;
+  private int temp; // used to generate Monster type
 
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int chosenClass;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -76,6 +89,22 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
+    s = "\nChoose your class: \n";
+    s += "\t1: Fighter\n";
+    System.out.println();
+    System.out.println("Fighter: " + Fighter.about());
+    s += "\t2: Tank\n";
+    System.out.println("Tank: " + Tank.about());
+    s += "\t3: Healer\n";
+    System.out.println("Healer: " + Healer.about());
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+        chosenClass = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
     s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
@@ -84,8 +113,14 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
-    //instantiate the player's character
-    pat = new Protagonist( name );
+    // instantiate the player's character
+    if (chosenClass == 1){
+      pat = new Fighter(name);
+    } else if (chosenClass == 2){
+      pat = new Tank(name);
+    } else {
+      pat = new Healer(name);
+    }
 
   }//end newGame()
 
@@ -105,7 +140,22 @@ public class YoRPG {
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+      temp = (int)(Math.random() * 3);
+      if (temp == 0){
+        smaug = new Peasant();
+        System.out.println("\nHere approacheth a Peasant!");
+        System.out.println(Peasant.about());
+      }
+      else if (temp == 1){
+        smaug = new Soldier();
+        System.out.println("\nHere approacheth a Soldier!");
+        System.out.println(Soldier.about());
+      }
+      else{
+        smaug = new Vanguard();
+        System.out.println("\nHere approacheth a Vanguard!");
+        System.out.println(Vanguard.about());
+      }
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -129,9 +179,6 @@ public class YoRPG {
 
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
-
-        // for testing:
-        // System.out.println("\nMonster HP: " + smaug.getHealth());
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
@@ -179,7 +226,7 @@ public class YoRPG {
     }
 
     System.out.println( "Thy game doth be over." );
-	      /*================================================
+	  /*================================================
 	  ================================================*/
   }//end main
 
