@@ -6,28 +6,28 @@
 
 #### Fighter:
 - Attack Rating: 1.25
-- Defense: 30
-- Specialize: Chance to stack potential damage until attack lands, but is also more vulnerable to monster attacks.
+- Defense: 10
+- Specialize: Increased damage but halved defense next turn.
 
 #### Tank:
 - Attack Rating: 0.8
-- Defense: 50
-- Specialize: Chance to nullify monster's attack next turn (make monster's attack deal 0 damage).
+- Defense: 15
+- Specialize: Has a chance to double defense for a turn. Your attack for that turn is greatly weakened.
 
 #### Healer:
 - Attack Rating: 1
-- Defense: 30
-- Specialize: Chance to heal yourself for 20 HP.
+- Defense: 10
+- Specialize: Chance to heal yourself for 20 HP. You will not attack this turn.
 
 
 ### Monster Subclasses:
 
 #### Peasant:
 - Attack Rating: 1
-- Defense: 10
+- Defense: 15
 #### Soldier:
 - Attack Rating: 1
-- Defense: 20
+- Defense: 10
 #### Vanguard:
 - Attack Rating: 0.75
-- Defense: 40
+- Defense: 20
