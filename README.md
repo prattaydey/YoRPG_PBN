@@ -5,9 +5,9 @@
 ### Protagonist Subclasses:
 
 #### Fighter:
-Attack Rating: 1.25
-Defense: 30
-Specialize: Chance to stack damage, but is also more vulnerable to monster attacks.
+- Attack Rating: 1.25
+- Defense: 30
+- Specialize: Chance to stack damage, but is also more vulnerable to monster attacks.
 
 #### Tank:
 Attack Rating: 1
