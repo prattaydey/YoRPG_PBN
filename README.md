@@ -29,5 +29,5 @@
 - Attack Rating: 1.2
 - Defense:20
 #### :
-- Attack Rating:1
+- Attack Rating: 1
 - Defense:40
