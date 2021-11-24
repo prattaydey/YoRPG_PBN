@@ -10,7 +10,7 @@
 - Specialize: Increased damage but halved defense next turn.
 
 #### Tank:
-- Attack Rating: 0.8
+- Attack Rating: 0.9
 - Defense: 12
 - Specialize: Has a chance to double defense for a turn. Your attack for that turn is greatly weakened.
 
