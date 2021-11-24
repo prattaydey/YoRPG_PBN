@@ -52,3 +52,4 @@
 - Expansion of kits
 - Make it more aesthetically pleasing when running in command line input.
 - Allow for greater (or less) randomness within the game.
+- Balance fixes and optimization.
