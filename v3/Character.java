@@ -22,10 +22,6 @@ public class Character{
   public void lowerHP(int dmg){
     health -= dmg;
   }
-  
-  public int getHP(){
-    return health;
-  }
 
   public int attack(Character name){
     if (Math.random() > LUCK_THRESHOLD){ // hit!
