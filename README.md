@@ -29,5 +29,5 @@
 - Attack Rating: 1.2
 - Defense: 20
 #### Vanguard:
-- Attack Rating: 1
+- Attack Rating: 0.75
 - Defense: 40
