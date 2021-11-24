@@ -1,6 +1,6 @@
 public class Tank extends Protagonist{
-  protected final double TANK_ATKRATING = 0.8;
-  protected final int TANK_DEFENSE = 15;
+  protected final double TANK_ATKRATING = 0.9;
+  protected final int TANK_DEFENSE = 12;
 
   public Tank(String input){
     super(input);
@@ -17,9 +17,13 @@ public class Tank extends Protagonist{
   // Your attack for this turn will be greatly weakened.
   public void specialize(){
     if (Math.random() > LUCK_THRESHOLD){
+      System.out.println("A successful defense!");
       defense = TANK_DEFENSE * 2;
     }
-    atkRating = TANK_ATKRATING / 2;
+    else{
+      System.out.println("Your defense failed!");
+    }
+    atkRating = TANK_ATKRATING / 1.5;
     }
 
   public void normalize(){

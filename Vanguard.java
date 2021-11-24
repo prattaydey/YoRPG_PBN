@@ -1,5 +1,5 @@
 public class Vanguard extends Monster{
-  protected final double VANGUARD_ATKRATING = 0.75;
+  protected final double VANGUARD_ATKRATING = 0.9;
   protected final int VANGUARD_DEFENSE = 20;
 
   public Vanguard(){
