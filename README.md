@@ -10,26 +10,26 @@
 - Specialize: Increased damage but halved defense next turn.
 
 #### Tank:
-- Attack Rating: 0.8
-- Defense: 15
+- Attack Rating: 0.9
+- Defense: 12
 - Specialize: Has a chance to double defense for a turn. Your attack for that turn is greatly weakened.
 
 #### Healer:
 - Attack Rating: 1
 - Defense: 10
-- Specialize: Chance to heal yourself for 20 HP. You will not attack this turn.
+- Specialize: Heal yourself for 10 HP. You will not attack this turn.
 
 
 ### Monster Subclasses:
 
 #### Peasant:
 - Attack Rating: 1
-- Defense: 15
+- Defense: 10
 #### Soldier:
 - Attack Rating: 1
-- Defense: 10
+- Defense: 15
 #### Vanguard:
-- Attack Rating: 0.75
+- Attack Rating: 0.9
 - Defense: 20
 
 ### Changelog:
