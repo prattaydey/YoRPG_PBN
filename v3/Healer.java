@@ -19,10 +19,13 @@ public class Healer extends Protagonist{
   public void specialize(){
     if (LUCK_THRESHOLD < Math.random() && health <= MAX_HEALTH){
       health += 20;
+      if (health > MAX_HEALTH){
+        health = MAX_HEALTH;
+      }
       System.out.println("A successful heal! Your Health is now " + health + ".");
     }
     else{
-      if (health + 10 > MAX_HEALTH){
+      if (health == MAX_HEALTH){
         System.out.println("You cannot heal any more! Your health cannot exceed " + MAX_HEALTH + ".");
       }
       System.out.println("You were not able to heal this time.");

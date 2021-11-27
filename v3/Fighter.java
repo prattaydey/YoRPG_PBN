@@ -17,7 +17,7 @@ public class Fighter extends Protagonist{
   // However, your defense will be halved for that turn.
   public void specialize(){
     defense = FIGHTER_DEFENSE / 2;
-    atkRating = FIGHTER_ATKRATING * 1.5;
+    atkRating = FIGHTER_ATKRATING * 1.35;
   }
 
   public void normalize(){
