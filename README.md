@@ -20,7 +20,7 @@
 - Attack Rating: 1
 - Defense: 10
 - HP: 100
-- Specialize: Heal yourself for 10 HP. You will not attack this turn.
+- Specialize: Heal yourself for 20 HP. You will not attack this turn.
 
 
 ### Monster Subclasses:
