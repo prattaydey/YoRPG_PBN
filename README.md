@@ -7,16 +7,19 @@
 #### Fighter:
 - Attack Rating: 1.25
 - Defense: 10
+- HP: 100
 - Specialize: Increased damage but halved defense next turn.
 
 #### Tank:
 - Attack Rating: 0.9
 - Defense: 12
+- HP: 150
 - Specialize: Has a chance to double defense for a turn. Your attack for that turn is greatly weakened.
 
 #### Healer:
 - Attack Rating: 1
 - Defense: 10
+- HP: 100
 - Specialize: Heal yourself for 10 HP. You will not attack this turn.
 
 
@@ -25,12 +28,15 @@
 #### Peasant:
 - Attack Rating: 1
 - Defense: 10
+- HP: 100
 #### Soldier:
 - Attack Rating: 1
 - Defense: 15
+- HP: 100
 #### Vanguard:
-- Attack Rating: 0.9
+- Attack Rating: 0.8
 - Defense: 20
+- HP: 100
 
 ### Changelog:
 
@@ -48,8 +54,17 @@
 - utilized super() in constructors
 - generally neater
 
+#### v2 -> v3:
+- added to Character's constructor
+- accounts for negative damage in attack()
+- added a message indicating current HPs
+- fixed bug where dead monsters could still attack you
+- set an HP limit on Healer's specialize()
+- general balance changes
+
 ### Future Improvements:
 - Expansion of kits
 - Make it more aesthetically pleasing when running in command line input.
 - Allow for greater (or less) randomness within the game.
 - Balance fixes and optimization.
+- More attack options
