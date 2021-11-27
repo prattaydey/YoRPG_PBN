@@ -1,6 +1,6 @@
 public class Peasant extends Monster{
   protected final double PEASANT_ATKRATING = 1;
-  protected final int PEASANT_DEFENSE = 15;
+  protected final int PEASANT_DEFENSE = 10;
 
   public Peasant(){
     super();

@@ -4,6 +4,7 @@ public class Tank extends Protagonist{
 
   public Tank(String input){
     super(input);
+    health = 130;
     atkRating = TANK_ATKRATING;
     defense = TANK_DEFENSE;
   }
@@ -22,6 +23,7 @@ public class Tank extends Protagonist{
     }
     else{
       System.out.println("Your defense failed!");
+      defense = TANK_DEFENSE;
     }
     atkRating = TANK_ATKRATING / 1.5;
     }

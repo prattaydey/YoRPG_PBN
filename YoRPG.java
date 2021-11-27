@@ -25,6 +25,7 @@
  * We implemented Math.random() to determine what kind of Monster you will encounter.
  *  - We defined int temp as a helper variable to store the value of a randomly generated int in the range [0,2].
  * We added print statements of the descriptions of different subclasses of Protagonists and Monsters.
+ * We added print statements letting the user know their current HP and the enemy's current HP.
  ***********************************************/
 
 import java.io.*;
@@ -178,10 +179,12 @@ public class YoRPG {
         d2 = smaug.attack( pat );
 
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
-                            " points of damage.");
+                            " points of damage." +
+                            "\n" + "The enemy's current health is " + smaug.getHP() + ".");
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-                            " for " + d2 + " points of damage.");
+                            " for " + d2 + " points of damage." +
+                            "\n" + "Your current health is " + pat.getHP() + ".");
 	    }//end while
 
 	    //option 1: you & the monster perish
